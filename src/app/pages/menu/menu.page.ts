@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '../../../../node_modules/@angular/router';
 import { UserService } from '../../home/user.service';
+import { Subject } from '../../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,9 @@ import { UserService } from '../../home/user.service';
 })
 export class MenuPage implements OnInit {
 
+  // const authSub = new Subject();
   auth = this.userService.getUserAuth();
+  selectedPath = '';
   pages = [
     {
       title: 'Restaurantes',
@@ -26,8 +29,6 @@ export class MenuPage implements OnInit {
     }
   ];
 
-  selectedPath = '';
-
   constructor(
     private router: Router,
     private userService: UserService,
@@ -40,5 +41,7 @@ export class MenuPage implements OnInit {
 
   ngOnInit() {
   }
+
+  // this.authSub.subscribe(value => console.log('Recieved new subject value: '));
 
 }
