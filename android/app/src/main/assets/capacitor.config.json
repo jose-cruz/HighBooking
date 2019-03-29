@@ -1,0 +1,6 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "HighBooking",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

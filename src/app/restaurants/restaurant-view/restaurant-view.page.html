@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/restaurants"></ion-back-button>
+      </ion-buttons>
+    <ion-title>{{ selectedRestaurant.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col no-padding>
+        <ion-img [src]="selectedRestaurant.imageUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <h3>{{ selectedRestaurant.name }}</h3>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

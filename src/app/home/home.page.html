@@ -1,14 +1,22 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-toolbar color='primary'>
+    <ion-title>HighBooking</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-list>
+    <ion-item routerLink='/restaurants'>
+      <ion-icon slot='start' name="pizza"></ion-icon>
+      <h2>Restaurantes</h2>
+    </ion-item>
+    <ion-item routerLink='/bookings'>
+      <ion-icon slot='start' name="book"></ion-icon>
+      <h2>Tus Reservaciones</h2>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot='start' name="log-out"></ion-icon>
+      <h2>Cerrar Sesión</h2>
+    </ion-item>
+  </ion-list>
 </ion-content>

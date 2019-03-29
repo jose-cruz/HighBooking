@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/restaurants"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tus Reservaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor='let booking of bookings'>
+    <ion-card-title>
+      <!-- <ion-avatar slot='start'> -->
+      <ion-thumbnail slot="start">
+        <ion-img [src]='booking.restaurant.imageUrl'></ion-img>
+      </ion-thumbnail>
+      <!-- </ion-avatar> -->
+      <ion-label>{{ booking.restaurant.name }}</ion-label>
+    </ion-card-title>
+    <ion-card-content>
+      <p>Fecha: {{ booking.date }}</p>
+      <p>Hora: {{ booking.time }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

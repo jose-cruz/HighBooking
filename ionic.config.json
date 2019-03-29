@@ -1,5 +1,7 @@
 {
-  "name": "HighBookingTest1",
-  "integrations": {},
+  "name": "HighBooking",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
