@@ -1,16 +1,19 @@
 <ion-header>
   <ion-toolbar color='primary'>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
     <ion-title>HighBooking</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item routerLink='/restaurants'>
+    <ion-item routerLink='/menu/restaurants'>
       <ion-icon slot='start' name="pizza"></ion-icon>
       <h2>Restaurantes</h2>
     </ion-item>
-    <ion-item routerLink='/bookings'>
+    <ion-item routerLink='/menu/bookings'>
       <ion-icon slot='start' name="book"></ion-icon>
       <h2>Tus Reservaciones</h2>
     </ion-item>

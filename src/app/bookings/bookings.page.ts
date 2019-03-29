@@ -23,9 +23,9 @@ export class BookingsPage implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    console.log('auth: ', this.auth);
     if (!this.auth) {
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/menu/login');
     } else {
       this.bookings = this.bookingService.getAllBookings();
       for (let i = 0; i < this.bookings.length; i++) {

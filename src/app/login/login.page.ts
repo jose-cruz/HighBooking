@@ -31,13 +31,7 @@ export class LoginPage implements OnInit {
 
   login() {
     if (this.userService.login(this.email, this.pass)) {
-      console.log('logged in, auth: ', this.userService.getUserAuth());
-      console.log('history.length: ', history.length);
-      if (history.length > 0) {
-        this._location.back();
-      } else {
-        this.router.navigateByUrl('/home');
-      }
+      this.router.navigateByUrl('/menu/home');
     } else {
       this.presentToast('Email o Contraseña incorrectos');
     }
