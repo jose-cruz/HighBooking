@@ -17,29 +17,14 @@ export class RestaurantsService {
       imageUrl: 'http://quieroarepas.com/wp-content/uploads/2014/01/quiero_arepas_logo.png',
     }, {
       id: '00003',
-      name: 'Restaurante Prueba 3',
-      imageUrl: 'http://quieroarepas.com/wp-content/uploads/2014/01/quiero_arepas_logo.png',
+      name: 'Sushi Ronin',
+      imageUrl: 'http://www.sushironindenver.com/wp-content/uploads/2017/12/sushi-ronin-logo.png',
     }, {
       id: '00004',
-      name: 'Restaurante Prueba 4',
-      imageUrl: 'http://quieroarepas.com/wp-content/uploads/2014/01/quiero_arepas_logo.png',
-    }, {
-      id: '00005',
-      name: 'Restaurante Prueba 5',
-      imageUrl: 'http://quieroarepas.com/wp-content/uploads/2014/01/quiero_arepas_logo.png',
-    }, {
-      id: '00006',
-      name: 'Restaurante Prueba 6',
-      imageUrl: 'http://quieroarepas.com/wp-content/uploads/2014/01/quiero_arepas_logo.png',
-    }, {
-      id: '00007',
-      name: 'Restaurante Prueba 7',
-      imageUrl: 'http://quieroarepas.com/wp-content/uploads/2014/01/quiero_arepas_logo.png',
-    }, {
-      id: '00008',
-      name: 'Restaurante Prueba 8',
-      imageUrl: 'http://quieroarepas.com/wp-content/uploads/2014/01/quiero_arepas_logo.png',
-    }
+      name: 'Cart-Driver',
+      // tslint:disable-next-line:max-line-length
+      imageUrl: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiGo6WEq6vhAhUDRqwKHQErDQUQjRx6BAgBEAU&url=http%3A%2F%2Fwww.3squarellc.com%2Fportfolio%2Fcart-driver%2F&psig=AOvVaw2_t7PvcUssYmqi5uLFAi7z&ust=1554085834509368',
+    },
     ];
 
   constructor() { }

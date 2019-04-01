@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '../../../../node_modules/@angular/router';
 import { UserService } from '../../home/user.service';
 import { Subject } from '../../../../node_modules/rxjs';
+import {take} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-menu',
@@ -11,6 +13,7 @@ import { Subject } from '../../../../node_modules/rxjs';
 export class MenuPage implements OnInit {
 
   // const authSub = new Subject();
+  interval;
   auth = this.userService.getUserAuth();
   selectedPath = '';
   pages = [
@@ -34,14 +37,25 @@ export class MenuPage implements OnInit {
     private userService: UserService,
   ) {
     this.router.events.subscribe((event: RouterEvent) => {
-      this.selectedPath = event.url;
-      console.log(event);
+      setTimeout(() => {
+        this.selectedPath = event.url;
+      }, 100);
     });
   }
 
   ngOnInit() {
+    this.auth = this.userService.getUserAuth();
+    this.startTimer();
   }
 
-  // this.authSub.subscribe(value => console.log('Recieved new subject value: '));
+  startTimer() {
+    this.interval = setInterval(() => {
+      this.auth = this.userService.getUserAuth();
+    }, 4000);
+  }
+
+  pauseTimer() {
+    clearInterval(this.interval);
+  }
 
 }

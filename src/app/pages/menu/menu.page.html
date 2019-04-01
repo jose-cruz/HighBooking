@@ -2,22 +2,22 @@
 
   <ion-menu contentId='content'>
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar color='secondary'>
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     
-    <ion-content>
+    <ion-content color="tertiary">
       <ion-list>
         <ion-menu-toggle auto-hide='false' *ngFor='let p of pages'>
           <ion-item *ngIf="p.title !== 'Iniciar Sesión' && p.title !== 'Cerrar Sesión'" [routerLink]="p.url" routerDirection='root' [class.active-item]="selectedPath === p.url" >
-            {{p.title}} 0
+            {{p.title}} 
           </ion-item>
           <ion-item *ngIf="p.title === 'Iniciar Sesión' && !auth" [routerLink]="p.url" routerDirection='root' [class.active-item]="selectedPath === p.url" >
-            {{p.title}} 1
+            {{p.title}} 
           </ion-item>
           <ion-item *ngIf="p.title === 'Cerrar Sesión' && auth" [routerLink]="p.url" routerDirection='root' [class.active-item]="selectedPath === p.url" >
-            {{p.title}} 2
+            {{p.title}} 
           </ion-item>
         </ion-menu-toggle>
       </ion-list>

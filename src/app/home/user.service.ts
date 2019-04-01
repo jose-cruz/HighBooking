@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from '../../../node_modules/rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   private logged = false;
-
+  private subject = new Subject;
   private user: object = {
     email: 'test@mail.com',
     password: '123456',
@@ -15,6 +16,8 @@ export class UserService {
       '00002'
     ]
   };
+
+  // authAnnounced$ = this.testStr.asObservable();
 
   constructor() { }
 

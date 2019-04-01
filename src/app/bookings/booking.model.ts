@@ -1,7 +1,9 @@
 export interface Booking {
     id: string;
+    restaurantId: string;
     date: string;
     time: string;
-    restaurantId: string;
+    people: number;
+    table: string;
     // sitting: object;
 }

@@ -1,0 +1,88 @@
+<ion-content color="tertiary">
+  <div class='booking-title'>
+    {{ restaurant }}
+  </div>
+  <div class="booking-info-container">
+    <ion-item>
+      <ion-label position='floating'>Fecha</ion-label>
+      <ion-datetime [(ngModel)]="data.date" display-format="DD/MM/YY" picker-format="DD MM YY"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position='floating'>Hora</ion-label>
+      <ion-datetime [(ngModel)]="data.time" display-format="hh:mm a" picker-format="hh mm" minuteValues="0,15,30,45" hourValues="7,8,9,10,11,12,13,14,15,16,17,18,19"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input [(ngModel)]="data.people" type="number" max='4' min='1'></ion-input>
+    </ion-item>
+  </div>
+  <div class="booking-sitting-container">
+
+  </div>
+  <div class='sitting-lauout-container'>
+    <div *ngIf="restaurant.name === 'Maria Empanada'" class="sitting-layout" style="display: grid; grid-template-areas:'table1 table2 table5' 'table1 table3 table5' 'table6 table6 .' '. table7 table7'; grid-gap: 20px">
+      <button [disabled]="true || data.people > 4" (click)="data.table = 'table1'" [ngClass]="{'table':true, 'table1':true, 'booked':true, 'selected':data.table === 'table1', 'blocked':data.people > 4}" style="grid-area:table1">
+        <span>4</span>
+        <div class="button-selection-color"></div>
+      </button>
+      <button [disabled]="(false || data.people > 2)" (click)="data.table = 'table2'" [ngClass]="{'table':true, 'table2':true, 'selected':data.table === 'table2', 'blocked':data.people > 2}" style="grid-area:table2">
+        <span>2</span>
+        <div class="button-selection-color"></div>
+      </button>
+      <button [disabled]="(false || data.people > 2)" (click)="data.table = 'table3'" [ngClass]="{'table':true, 'table3':true, 'selected':data.table === 'table3', 'blocked':data.people > 2}" style="grid-area:table3">
+        <span>2</span>
+        <div class="button-selection-color"></div>
+      </button>
+      <button [disabled]="false || data.people > 4" (click)="data.table = 'table5'" [ngClass]="{'table':true, 'table5':true, 'selected':data.table === 'table5', 'blocked':data.people > 4}" style="grid-area:table5">
+        <span>4</span>
+        <div class="button-selection-color"></div>
+      </button>
+      <button [disabled]="false || data.people > 4" (click)="data.table = 'table6'" [ngClass]="{'table':true, 'table6':true, 'selected':data.table === 'table6', 'blocked':data.people > 4}" style="grid-area:table6">
+        <span>4</span>
+        <div class="button-selection-color"></div>  
+      </button>
+      <button [disabled]="true || data.people > 4" (click)="data.table = 'table7'" [ngClass]="{'table':true, 'table7':true, 'booked':true, 'selected':data.table === 'table7', 'blocked':data.people > 4}" style="grid-area:table7">
+        <span>4</span>
+        <div class="button-selection-color"></div>
+      </button>
+    </div>
+    <div *ngIf="restaurant.name === 'Sushi Ronin'" class="sitting-layout" style="display: grid; grid-template-areas:'table1 table1 table1 table1' 'table2 table6 table6 table6' 'table3 table7 table7 table7' 'table4 table8 table8 table8' 'table5 table9 table9 table9'; grid-gap: 20px">
+      <button class="table table1" style="grid-area:table1">6</button>
+      <button class="table table2" style="grid-area:table2">1</button>
+      <button class="table table3" style="grid-area:table3">1</button>
+      <button class="table table4" style="grid-area:table4">1</button>
+      <button class="table table5" style="grid-area:table5">1</button>
+      <button class="table table6" style="grid-area:table6">4</button>
+      <button class="table table7" style="grid-area:table7">4</button>
+      <button class="table table8" style="grid-area:table8">4</button>
+      <button class="table table9" style="grid-area:table9">4</button>
+    </div>
+    <div *ngIf="restaurant.name === 'Quiero Arepas'" class="sitting-layout" style="display: grid; grid-template-areas:'table1 table2 table5' 'table1 table3 table5' 'table6 table6 .' '. table7 table7'; grid-gap: 20px">
+      <button class="table table1" style="grid-area:table1">4</button>
+      <button class="table table2" style="grid-area:table2">2</button>
+      <button class="table table3" style="grid-area:table3">2</button>
+      <button class="table table5" style="grid-area:table5">4</button>
+      <button class="table table6" style="grid-area:table6">4</button>
+      <button class="table table7" style="grid-area:table7">4</button>
+    </div>
+    <div *ngIf="restaurant.name === 'Cart-Driver'" class="sitting-layout" style="display: grid; grid-template-areas:'table1 table2 table5' 'table1 table3 table5' 'table6 table6 .' '. table7 table7'; grid-gap: 20px">
+      <button class="table table1" style="grid-area:table1">4</button>
+      <button class="table table2" style="grid-area:table2">2</button>
+      <button class="table table3" style="grid-area:table3">2</button>
+      <button class="table table5" style="grid-area:table5">4</button>
+      <button class="table table6" style="grid-area:table6">4</button>
+      <button class="table table7" style="grid-area:table7">4</button>
+    </div>
+    <div class="sitting-layout-container-opacity"></div>
+  </div>
+</ion-content>
+<ion-footer>
+  <!-- <ion-toolbar color='primary'> -->
+    <div class="button-container">
+      <ion-button color="dark" expand='full' (click)='closeModal()' >Cancelar</ion-button>
+      <ion-button color="secondary" expand='full' (click)='book()' >Reservar</ion-button>
+        <!-- <button class='button-add' (click)='closeModal()' >Cancelar</button>
+        <button class='button-cancel' (click)='book()' >Reservar</button> -->
+      </div>
+  <!-- </ion-toolbar> -->
+</ion-footer>
