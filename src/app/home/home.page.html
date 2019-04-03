@@ -8,7 +8,18 @@
 </ion-header>
 
 <ion-content color="tertiary">
-  <ion-list>
+  <div class='content'>
+    <div class='restaurant-container'>
+      <a class='restaurant-link' routerLink='/menu/restaurants'>RESTAURANTES</a>
+      <img src="https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    </div>
+    <div class='booking-container'>
+      <a routerLink='/menu/bookings'>TUS RESERVACIONES</a>
+      <img src="https://www.salawus.com/assets/htmlimages/Reserved%20sign%20on%20restaurant%20table.jpg" alt="">
+    </div>
+  </div>
+
+  <!-- <ion-list>
     <ion-item routerLink='/menu/restaurants'>
       <ion-icon slot='start' name="pizza"></ion-icon>
       <h2>Restaurantes</h2>
@@ -21,5 +32,5 @@
       <ion-icon slot='start' name="log-out"></ion-icon>
       <h2>Cerrar Sesión</h2>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 </ion-content>

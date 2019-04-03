@@ -1,0 +1,22 @@
+.restarant-name{
+    font-family: 'Marck Script', cursive;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.button-container{
+    height: 65px;
+
+    ion-button{
+        height: 63px !important;
+    }
+}
+
+ion-list{
+    padding: 20px 0;
+}
+
+ion-item{
+    display: grid;
+    justify-content: center;
+}

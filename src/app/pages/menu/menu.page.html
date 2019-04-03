@@ -8,10 +8,18 @@
     </ion-header>
     
     <ion-content color="tertiary">
-      <ion-list>
+      <div class='menu-container'>
+        <ion-menu-toggle *ngFor='let p of pages' class='menu-item'>
+          <a *ngIf="p.title !== 'Iniciar Sesión' && p.title !== 'Cerrar Sesión'" [routerLink]="p.url" routerDirection='root'>{{p.title}} </a>
+          <a *ngIf="p.title === 'Iniciar Sesión' && !auth" [routerLink]="p.url" routerDirection='root'>{{p.title}}</a>
+          <a *ngIf="p.title === 'Iniciar Sesión' && auth" routerLink="/menu/home" routerDirection='root'>Cerrar Sesión</a>
+          <h1>></h1>
+        </ion-menu-toggle>
+      </div>
+      <!-- <ion-list>
         <ion-menu-toggle auto-hide='false' *ngFor='let p of pages'>
           <ion-item *ngIf="p.title !== 'Iniciar Sesión' && p.title !== 'Cerrar Sesión'" [routerLink]="p.url" routerDirection='root' [class.active-item]="selectedPath === p.url" >
-            {{p.title}} 
+            {{p.title}}
           </ion-item>
           <ion-item *ngIf="p.title === 'Iniciar Sesión' && !auth" [routerLink]="p.url" routerDirection='root' [class.active-item]="selectedPath === p.url" >
             {{p.title}} 
@@ -20,7 +28,7 @@
             {{p.title}} 
           </ion-item>
         </ion-menu-toggle>
-      </ion-list>
+      </ion-list> -->
     </ion-content>
   </ion-menu>
   

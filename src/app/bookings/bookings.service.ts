@@ -64,7 +64,7 @@ export class BookingsService {
   }
 
   addBooking(newBooking: Booking) {
-    // this.bookings.push(newBooking);
+    this.bookings.push(newBooking);
     const tempNextId = Number(this.nextBookingId) + 1;
     this.nextBookingId = tempNextId.toString();
     while (this.nextBookingId.length < 5) {

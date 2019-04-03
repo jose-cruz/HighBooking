@@ -9,18 +9,32 @@
 </ion-header>
 
 <ion-content color="tertiary">
-  <ion-card *ngFor='let booking of bookings'>
+  <div class='content'>
+    <div *ngIf="bookings.length > 0" class='bookings-container'>
+      <div class='booking' *ngFor='let booking of bookings'>
+        <img [src]='booking.restaurant.imageUrl'>
+        <h2>{{ booking.restaurant.name }}</h2>
+        <p>Fecha: {{ booking.date }}</p>
+        <p>Hora: {{ booking.time }}</p>
+        <p>Cantidad: {{booking.people}}</p>
+        <p>Mesa: {{booking.table}}</p>
+      </div>
+    </div>
+    <div *ngIf="bookings.length === 0" class='no-bookings'>
+      <h1>¡Haz tu primera reservación!</h1>
+      <ion-button expand='full' [routerLink]="menu/restaurants">Restaurantes</ion-button>
+    </div>
+  </div>
+  <!-- <ion-card *ngFor='let booking of bookings'>
     <ion-card-title>
-      <!-- <ion-avatar slot='start'> -->
       <ion-thumbnail slot="start">
         <ion-img [src]='booking.restaurant.imageUrl'></ion-img>
       </ion-thumbnail>
-      <!-- </ion-avatar> -->
       <ion-label>{{ booking.restaurant.name }}</ion-label>
     </ion-card-title>
     <ion-card-content>
       <p>Fecha: {{ booking.date }}</p>
       <p>Hora: {{ booking.time }}</p>
     </ion-card-content>
-  </ion-card>
+  </ion-card> -->
 </ion-content>

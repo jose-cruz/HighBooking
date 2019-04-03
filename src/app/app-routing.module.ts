@@ -28,7 +28,6 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 // ];
 const routes: Routes = [
   { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
-  { path: 'new-reservation-modal-test', loadChildren: './pages/new-reservation-modal-test/new-reservation-modal-test.module#NewReservationModalTestPageModule' },
 ];
 
 @NgModule({

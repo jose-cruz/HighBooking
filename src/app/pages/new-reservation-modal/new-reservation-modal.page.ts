@@ -11,6 +11,7 @@ import { Booking } from '../../bookings/booking.model';
 export class NewReservationModalPage implements OnInit {
 
   restaurant = null;
+  noTable = false;
   data: Booking = {
     id: null,
     restaurantId: null,
@@ -40,9 +41,16 @@ export class NewReservationModalPage implements OnInit {
   }
 
   book() {
-    console.log('adding reservation for restaurant ', this.restaurant.name);
-    this.bookingService.addBooking(this.data);
-    this.closeModal();
+    if (this.data.table === null) {
+      this.noTable = true;
+    } else {
+      this.noTable = false;
+      console.log('adding reservation for restaurant ', this.restaurant.name);
+      this.data['date'] = new Date(this.data['date']).toLocaleDateString();
+      this.data['time'] = new Date(this.data['time']).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+      this.bookingService.addBooking(this.data);
+      this.closeModal();
+    }
   }
 
   closeModal() {

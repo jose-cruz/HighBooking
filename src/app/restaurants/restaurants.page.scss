@@ -1,0 +1,27 @@
+.content{
+    display: grid;
+    grid-auto-rows: 30vh;
+
+    .restaurant-container{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        box-shadow: 3px 2px 3px 3px rgba(67, 67, 67, 0.1);
+        transition: all 0.3 ease-in-out;
+    
+        a{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &:active{
+            transform: scale(1.05);
+        }
+    
+    }
+
+}

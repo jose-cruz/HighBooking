@@ -1,0 +1,38 @@
+.no-bookings{
+    display: grid;
+    padding: 20px;
+    grid-row-gap: 20px;
+
+    ion-button{
+        font-size: 22px;
+    }
+
+}
+
+.bookings-container{
+    display: grid;
+    grid-row-gap: 15px;
+
+    .booking{
+        display: grid;
+        grid-template-areas: "title title"". img" ". img"". img" ". img";
+        grid-gap: 10px;
+        align-items: center;
+        background: white;
+        padding: 20px;
+
+        img{
+            grid-area: img;
+            max-height: 120px;
+        }
+        h2{
+            grid-area: title;
+            margin: 0;
+        }
+        p{
+            margin: 0;
+        }
+
+    }
+
+}

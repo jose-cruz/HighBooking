@@ -1,0 +1,71 @@
+
+.content{
+    display: grid;
+    grid-auto-rows: 30vh;
+
+    .restaurant-container{
+        display: grid;
+        justify-items: center;
+        align-items: stretch;
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        justify-self: center;
+
+        a{
+            font-family: 'Marck Script', cursive;
+            z-index: 2;
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+            justify-content: center;
+            align-content: center;
+            display: grid;
+            background: rgba(222, 147, 10, 0.26);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        img{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+    }
+
+    .booking-container{
+        display: grid;
+        justify-items: center;
+        align-items: stretch;
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        justify-self: center;
+
+        a{
+            font-family: 'Marck Script', cursive;
+            z-index: 2;
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+            justify-content: center;
+            align-content: center;
+            display: grid;
+            background: rgba(77, 66, 65, 0.6);
+            width: 100%;
+        }
+
+        img{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+    }
+
+}

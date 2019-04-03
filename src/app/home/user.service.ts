@@ -6,7 +6,7 @@ import { Subject } from '../../../node_modules/rxjs';
 })
 export class UserService {
 
-  private logged = false;
+  private logged = true;
   private subject = new Subject;
   private user: object = {
     email: 'test@mail.com',

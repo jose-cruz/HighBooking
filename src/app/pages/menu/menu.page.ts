@@ -26,10 +26,7 @@ export class MenuPage implements OnInit {
     }, {
       title: 'Iniciar Sesión',
       url: '/menu/login'
-    }, {
-      title: 'Cerrar Sesión',
-      url: '/menu/home'
-    }
+    },
   ];
 
   constructor(

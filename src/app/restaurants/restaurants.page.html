@@ -9,12 +9,20 @@
 </ion-header>
 
 <ion-content color="tertiary">
-  <ion-list>
+
+  <div class='content'>
+    <div *ngFor='let rest of restaurants' class="restaurant-container" [style.backgroundImage]="'url(' + rest.imageUrl + ')'">
+      <a [routerLink]="['/menu/restaurants', rest.id]"></a>
+      <!-- <h2>{{ rest.name }}</h2> -->
+    </div>
+  </div>
+
+  <!-- <ion-list>
     <ion-item *ngFor='let rest of restaurants' [routerLink]="['/menu/restaurants', rest.id]">
       <ion-avatar slot='start'>
         <ion-img [src]='rest.imageUrl' ionImgDidLoad=''></ion-img>
       </ion-avatar>
       <ion-label>{{ rest.name }}</ion-label>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 </ion-content>

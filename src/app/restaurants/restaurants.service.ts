@@ -14,16 +14,16 @@ export class RestaurantsService {
     }, {
       id: '00002',
       name: 'Quiero Arepas',
-      imageUrl: 'http://quieroarepas.com/wp-content/uploads/2014/01/quiero_arepas_logo.png',
+      imageUrl: 'https://pbs.twimg.com/profile_images/974989624228560902/66eEl85D.png',
     }, {
       id: '00003',
       name: 'Sushi Ronin',
       imageUrl: 'http://www.sushironindenver.com/wp-content/uploads/2017/12/sushi-ronin-logo.png',
     }, {
       id: '00004',
-      name: 'Cart-Driver',
+      name: 'Hop Alley',
       // tslint:disable-next-line:max-line-length
-      imageUrl: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiGo6WEq6vhAhUDRqwKHQErDQUQjRx6BAgBEAU&url=http%3A%2F%2Fwww.3squarellc.com%2Fportfolio%2Fcart-driver%2F&psig=AOvVaw2_t7PvcUssYmqi5uLFAi7z&ust=1554085834509368',
+      imageUrl: 'https://static1.squarespace.com/static/559b4924e4b0e8559d2b7a1b/t/5666324969492e8e1cd78c08/1449538193280/Hop+Alley+Chinese+Food%2C+Denver',
     },
     ];
 

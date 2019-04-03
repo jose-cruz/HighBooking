@@ -9,8 +9,20 @@
 </ion-header>
 
 <ion-content color="tertiary">
-  <ion-button color="secondary" (click)='newRes()'>Reserva!</ion-button>
-  <ion-grid no-padding>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        <h3 class='restarant-name'>{{ selectedRestaurant.name }}</h3>
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/menu-flyer-template-5632286b490608db0301a085b91cde86_screen.jpg?ts=1498606109">
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-button color="secondary" (click)='newRes()'>Reserva!</ion-button> -->
+  <!-- <ion-grid no-padding>
     <ion-row>
       <ion-col no-padding>
         <ion-img [src]="selectedRestaurant.imageUrl"></ion-img>
@@ -21,5 +33,11 @@
           <h3>{{ selectedRestaurant.name }}</h3>
         </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid> -->
 </ion-content>
+
+<ion-footer>
+  <div class="button-container">
+    <ion-button expand='full' color="secondary" (click)='newRes()'>Reserva!</ion-button>
+  </div>
+</ion-footer>
